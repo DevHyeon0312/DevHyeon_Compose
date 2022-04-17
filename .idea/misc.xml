@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../layout/compose-model-1650185564406.xml" value="0.25971283783783783" />
+        <entry key="../../../layout/compose-model-1650185985131.xml" value="0.4111111111111111" />
+        <entry key="../../../layout/compose-model-1650189627539.xml" value="0.375" />
+      </map>
+    </option>
+  </component>
   <component name="PDMPlugin">
     <option name="skipTestSources" value="false" />
   </component>
