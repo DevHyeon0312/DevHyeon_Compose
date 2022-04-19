@@ -5,7 +5,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.devhyeon.compose.ui.components.HomeListItemView
@@ -13,9 +13,10 @@ import com.devhyeon.compose.ui.theme.DevHyeonCompose1Theme
 
 @Composable
 fun HomeScreen() {
+    println("DevHyeon >>>> HomeScreen()")
     DevHyeonCompose1Theme {
         Surface(color = MaterialTheme.colors.background) {
-            val items: List<String> = List(1000) { "$it" }
+            val items: List<String> = List(100) { "$it" }
             LazyColumn(modifier = Modifier.padding(vertical = 4.dp)) {
                 items(items = items) { number ->
                     HomeListItemView(

@@ -1,5 +1,7 @@
 package com.devhyeon.compose.ui.theme
 
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val Purple200 = Color(0xFFBB86FC)
@@ -10,3 +12,8 @@ val Navy = Color(0xFF073042)
 val Blue = Color(0xFF4285F4)
 val LightBlue = Color(0xFFD7EFFE)
 val Chartreuse = Color(0xFFEFF7CF)
+
+@Composable
+fun navigationBackGroundColor(): Color = if (isSystemInDarkTheme()) Color.Black else Color.White
+@Composable
+fun navigationContentColor(): Color = if (isSystemInDarkTheme()) Color.White else Color.Black

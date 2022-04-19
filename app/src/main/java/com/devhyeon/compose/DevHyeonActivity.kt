@@ -8,9 +8,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import com.devhyeon.compose.ui.components.SetTransDebugSystemBar
+import com.devhyeon.compose.ui.components.SetDefaultSystemBar
 import com.devhyeon.compose.ui.components.SetTransSystemBar
-import com.devhyeon.compose.ui.screen.home.HomeScreen
+import com.devhyeon.compose.ui.screen.main.MainNavHostScreen
 import com.devhyeon.compose.ui.screen.onboarding.OnboardingScreen
 
 class DevHyeonActivity : ComponentActivity() {
@@ -19,7 +19,8 @@ class DevHyeonActivity : ComponentActivity() {
         setContent {
             DevHyeonContent()
             if (BuildConfig.DEBUG) {
-                SetTransDebugSystemBar(window = window)
+                SetDefaultSystemBar(window = window)
+//                SetTransDebugSystemBar(window = window)
             } else {
                 SetTransSystemBar(window = window)
             }
@@ -38,6 +39,6 @@ fun DevHyeonContent() {
     if (shouldShowOnboarding) {
         OnboardingScreen(onContinueClicked = { shouldShowOnboarding = false })
     } else {
-        HomeScreen()
+        MainNavHostScreen()
     }
 }
