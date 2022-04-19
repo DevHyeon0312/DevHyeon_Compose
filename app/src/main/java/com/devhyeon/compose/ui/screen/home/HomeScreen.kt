@@ -13,7 +13,6 @@ import com.devhyeon.compose.ui.theme.DevHyeonCompose1Theme
 
 @Composable
 fun HomeScreen() {
-    println("DevHyeon >>>> HomeScreen()")
     DevHyeonCompose1Theme {
         Surface(color = MaterialTheme.colors.background) {
             val items: List<String> = List(100) { "$it" }
